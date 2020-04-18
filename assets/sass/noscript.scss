@@ -3,24 +3,23 @@
 @import 'libs/mixins';
 @import 'libs/vendor';
 @import 'libs/breakpoints';
+@import 'libs/html-grid';
 
 /*
-	Parallelism by HTML5 UP
+	Overflow by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-/* Main */
+/* Header */
 
-	#main {
-		opacity: 1 !important;
-		overflow-x: auto !important;
+	#header {
+		body.is-preload & {
+			opacity: 1;
 
-		.item {
-			&.thumb {
-				img {
-					opacity: 1 !important;
-				}
+			footer {
+				@include vendor('transform', 'none');
+				opacity: 1;
 			}
 		}
 	}
